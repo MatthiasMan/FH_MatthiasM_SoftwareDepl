@@ -11,8 +11,47 @@
         "storageSKU":{
             "value": "Standard_LRS"
         },
-        "webAppName":{
-            "value": "MyWebApp"
+        "subscriptionId": {
+            "value": "7123499f-d0d1-457f-8bdd-e36f787e2e0e"
+        },
+        "name": {
+            "value": "MyMMWebApp"
+        },
+        "location": {
+            "value": "North Europe"
+        },
+        "hostingPlanName": {
+            "value": "MyMMWebApp"
+        },
+        "serverFarmResourceGroup": {
+            "value": "MyMMGroup"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "sku": {
+            "value": "Free"
+        },
+        "skuCode": {
+            "value": "F1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "currentStack": {
+            "value": "node"
+        },
+        "phpVersion": {
+            "value": "OFF"
+        },
+        "nodeVersion": {
+            "value": "12.13.0"
         }
     }
 }
