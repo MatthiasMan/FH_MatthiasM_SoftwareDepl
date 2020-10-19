@@ -1,4 +1,5 @@
 az group create --name MyMMGroup --location "North Europe"
+
 az deployment group create --name MyMMDeployment --resource-group MyMMGroup --template-file ./Lab1/azuredeploy.json --parameters ./Lab1/azuredeploy.parameters.json
 https://mymmwebapp.azurewebsites.net/
 
