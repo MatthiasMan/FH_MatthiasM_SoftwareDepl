@@ -13,6 +13,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
+    workingDir: '$(Build.SourcesDirectory)/HelloWExpress'
 
 - script: npx mocha
 - task: NodeTool@0
