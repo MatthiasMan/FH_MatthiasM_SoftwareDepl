@@ -23,6 +23,6 @@ steps:
   inputs:
     azureSubscription: 'Azure für Bildungseinrichtungen(7123499f-d0d1-457f-8bdd-e36f787e2e0e)'
     appType: 'webApp'
-    appName: 'HWE'
+    appName: 'MyMMWebApp'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
