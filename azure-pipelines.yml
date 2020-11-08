@@ -18,4 +18,3 @@ steps:
     command: 'custom'
     workingDir: 'HelloWExpress'
     customCommand: 'run test'
-
