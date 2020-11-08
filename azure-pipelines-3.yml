@@ -18,4 +18,5 @@ steps:
 - script: |
     npm install
     npm build
+    ./node_modules/.bin/mocha
   displayName: 'npm install and build'
