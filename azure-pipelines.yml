@@ -13,8 +13,20 @@ steps:
 - task: NodeTool@0 
   inputs:
     versionSpec: '12.x'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'install --global mocha'
+
 - task: Npm@1
   inputs:
     command: 'custom'
     workingDir: 'HelloWExpress'
     customCommand: 'run test'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    searchFolder: 'HelloWExpress'
