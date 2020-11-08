@@ -7,5 +7,5 @@ module.exports = app.listen(port, () => {
   })
 
 app.get('/', (req, res) => {
-  res.status(200).json({ str: 'Hello World!'});;
+  res.status(200).json({ str: 'Hello Worldd!'});;
 })
