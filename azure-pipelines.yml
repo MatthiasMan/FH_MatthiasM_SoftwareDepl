@@ -10,13 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: NodeTool@0 
-  inputs:
-    versionSpec: '12.x' 
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'test'
-    workingDir: '$(Build.SourcesDirectory)/HelloWExpress/node_modules/.bin/mocha'
-  continueOnError: true
-  
+    workingDir: 'HelloWExpress'
+    customCommand: 'run test'
+
