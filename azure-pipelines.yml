@@ -10,12 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Npm@1
+
+- task: NodeTool@0
   inputs:
-    command: 'custom'
-    workingDir: '$(System.DefaultWorkingDirectory)\HelloWExpress'
-    customCommand: 'run test'
-  continueOnError: true
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
   
 - script: |
     npm run test
