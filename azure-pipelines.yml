@@ -15,6 +15,6 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run test'
-    workingDir: '$(Build.SourcesDirectory)/helloWExpress'
+    workingDir: '$(Build.SourcesDirectory)/HelloWExpress'
   continueOnError: true
   
