@@ -17,6 +17,6 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'test'
-    workingDir: '$(Build.SourcesDirectory)/HelloWExpress'
+    workingDir: '$(Build.SourcesDirectory)/HelloWExpress/node_modules/.bin/mocha'
   continueOnError: true
   
