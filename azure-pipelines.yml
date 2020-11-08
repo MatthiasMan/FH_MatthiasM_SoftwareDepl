@@ -15,7 +15,7 @@ steps:
     command: 'install'
     workingDir: '$(Build.SourcesDirectory)/HelloWExpress'
 
-- script: npx mocha
+- script: npm install mocha
 - task: NodeTool@0
   inputs:
     versionSpec: '6.x' 
