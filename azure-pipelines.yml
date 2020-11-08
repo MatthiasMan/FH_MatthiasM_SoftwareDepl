@@ -13,7 +13,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'run test'
+    customCommand: 'test'
     workingDir: '$(Build.SourcesDirectory)/HelloWExpress'
   continueOnError: true
   
