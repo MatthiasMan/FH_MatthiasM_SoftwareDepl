@@ -4,41 +4,61 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+#npm install
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-  
+
 - script: |
     npm install
     chmod 0777 ./node_modules/.bin/mocha
-    npm test
   displayName: 'npm install and build'
   workingDirectory: '$(Build.SourcesDirectory)/HelloWExpress'
-  
+
+- task: NodeTool@0 
+  inputs:
+    versionSpec: '12.x'
+
+#install mocha
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'install --global mocha'
+
+#run test
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: 'HelloWExpress'
+    customCommand: 'run test'
+
+#publish test results
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/test-results.xml'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
     searchFolder: '$(Build.SourcesDirectory)/HelloWExpress'
 
+#publish artifact
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/HelloWExpress'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-    
+
+#deploy web app to azure
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure für Bildungseinrichtungen(7123499f-d0d1-457f-8bdd-e36f787e2e0e)'
-    appType: 'webAppLinux'
+    appType: 'webApp'
     appName: 'MyMMWebApp'
     package: '$(System.DefaultWorkingDirectory)/HelloWExpress'
     customWebConfig: '-Handler iisnode -NodeStartFile index.js -appType node'
