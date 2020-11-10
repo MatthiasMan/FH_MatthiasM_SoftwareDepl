@@ -15,7 +15,7 @@ describe('/GET', () => {
               res.should.have.status(200);
               //res.should.have.property('str')
               //assertChai.lengthOf(res.body, 1);
-              res.body.str.should.eq('Hello World!');
+              res.body.should.eq('Hello World!');
               //res.body.should.eq('Hello World!');
               //res.body.should.have.lengthOf(3);
           done();
