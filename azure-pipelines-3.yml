@@ -45,6 +45,13 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     searchFolder: 'HelloWExpress'
 
+#publish artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/HelloWExpress'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 #deploy web app to azure
 - task: AzureWebApp@1
   inputs:
@@ -52,4 +59,5 @@ steps:
     appType: 'webApp'
     appName: 'MyMMWebApp'
     package: '$(System.DefaultWorkingDirectory)/HelloWExpress'
-    deploymentMethod: 'auto'
+    customWebConfig: '-Handler iisnode -NodeStartFile index.js -appType node'
+    #deploymentMethod: 'auto'
