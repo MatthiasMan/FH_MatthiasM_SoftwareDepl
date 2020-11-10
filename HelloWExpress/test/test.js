@@ -1,10 +1,10 @@
 var assert = require('assert');
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../index');
-let should = chai.should();
+//let server = require('../index');
+//let should = chai.should();
 
-var assertChai = chai.assert;
+//var assertChai = chai.assert;
 
 /*chai.use(chaiHttp);
 describe('/GET', () => {
