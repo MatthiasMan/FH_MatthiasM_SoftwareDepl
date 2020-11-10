@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-#npm install amd test
+#npm install and test
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -22,17 +22,6 @@ steps:
     npm test
   displayName: 'npm install and test'
   workingDirectory: '$(Build.SourcesDirectory)/HelloWExpress'
-
-- task: NodeTool@0 
-  inputs:
-    versionSpec: '12.x'
-
-#install mocha
-- task: Npm@1
-  inputs:
-    command: 'custom'
-    customCommand: 'install --global mocha'
-
 
 #publish test results
 - task: PublishTestResults@2
