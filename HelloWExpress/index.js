@@ -1,6 +1,6 @@
 
 const appInsights = require('applicationinsights');
-appInsights.setup('046300d4-5ea1-43e9-858c-4d8265a570d4').start();
+appInsights.setup('afd42de7-5ea1-4a25-8ce6-c7f18f48a896').start();
 const express = require('express')
 const app = express()
 const port = 3000
@@ -11,4 +11,3 @@ module.exports = app.listen(port, () => {
 app.get('/', (req, res) => {
   res.status(200).json('Hello World!');;
 })
-//s
