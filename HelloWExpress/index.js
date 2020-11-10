@@ -9,6 +9,6 @@ module.exports = app.listen(port, () => {
   })
 
 app.get('/', (req, res) => {
-  res.json('Hello World!');;
+  res.send('Hello World!');;
 })
 //h

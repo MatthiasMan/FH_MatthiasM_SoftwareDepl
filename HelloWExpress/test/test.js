@@ -6,7 +6,7 @@ let should = chai.should();
 
 var assertChai = chai.assert;
 
-chai.use(chaiHttp);
+/*chai.use(chaiHttp);
 describe('/GET', () => {
   it('it should status 200 and return hello world', (done) => {
     chai.request(server)
@@ -21,7 +21,7 @@ describe('/GET', () => {
           done();
         });
   });
-});
+});*/
 
 
 describe('Array', function() {
