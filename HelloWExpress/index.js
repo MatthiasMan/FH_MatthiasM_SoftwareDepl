@@ -5,7 +5,7 @@ const appInsights = require('applicationinsights');
 appInsights.setup('afd42de7-5ea1-4a25-8ce6-c7f18f48a896').start();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');;
+  res.send('Hello World!')
 })
 
 //module.exports =
