@@ -37,7 +37,7 @@ steps:
     
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Azure für Bildungseinrichtungen(c033053b-1bf9-4848-ad45-889e445f304e)'
+    azureSubscription: 'Azure für Bildungseinrichtungen(7123499f-d0d1-457f-8bdd-e36f787e2e0e)'
     appType: 'webAppLinux'
     appName: 'Lab1PeterVadle'
     package: '$(System.DefaultWorkingDirectory)/Simple_Web_App'
