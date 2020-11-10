@@ -42,5 +42,3 @@ steps:
     appName: 'Lab1PeterVadle'
     package: '$(System.DefaultWorkingDirectory)/Simple_Web_App'
     customWebConfig: '-Handler iisnode -NodeStartFile index.js -appType node'
-    
-
