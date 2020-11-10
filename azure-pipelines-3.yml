@@ -19,6 +19,7 @@ steps:
 - script: |
     npm install
     npm build
+    chmod 0777 ./node_modules/.bin/mocha
   displayName: 'npm install and build'
 
 - task: NodeTool@0 
@@ -40,6 +41,7 @@ steps:
 
 #publish test results
 - task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
@@ -60,4 +62,3 @@ steps:
     appName: 'MyMMWebApp'
     package: '$(System.DefaultWorkingDirectory)/HelloWExpress'
     customWebConfig: '-Handler iisnode -NodeStartFile index.js -appType node'
-    #deploymentMethod: 'auto'
