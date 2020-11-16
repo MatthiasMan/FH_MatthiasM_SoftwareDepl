@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # Database MySQL
+  # MySQL DB
   db:
     build: ./MySQL
     ports:
