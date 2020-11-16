@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Database MySQL
+  db:
+    build: ./MySQL
+    ports:
+      - "8080:3306"
+    volumes:
+      - type: volume
+        source: db_data
+        target: /var/lib/mysql
+    restart: always
+    networks:
+      - wpsite
+  # Wordpress
+  wordpress:
+    build: ./WP
+    depends_on:
+      - db
+    ports:
+      - '80:80'
+    restart: always
+    volumes:
+      - type: volume
+        source: wpconfig
+        target: /etc/wordpress
+      - type: volume
+        source: wpuploads
+        target: /var/www/html/wp-content/uploads
+    restart: always
+    networks:
+      - wpsite
+networks:
+  wpsite:
+volumes:
+  db_data:
+  wpconfig:
+  wpuploads:
