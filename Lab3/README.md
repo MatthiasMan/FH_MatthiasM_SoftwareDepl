@@ -18,7 +18,7 @@ Diese Images sollen diesmal selbst auf basis von debian jessie erstellt werden u
 
 Um die images zu builden muss folgender Befehl eingegeben werden:
 
-docker build <path>
+docker build --path--
 
 Dies ist jedoch nicht unbedingt notwendig, wenn schluss endlich der container das resultat seien sollen.
 Bei dem docker-compose.yaml werden nämlich automatisch die images gebuildet.(falls noch nicht gebuildet)
