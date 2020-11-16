@@ -12,6 +12,7 @@ services:
       MYSQL_PASSWORD: myPwd
     networks:
       - wpsite
+      
   # Wordpress
   wordpress:
     depends_on:
