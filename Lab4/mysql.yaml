@@ -1,7 +1,8 @@
+# Service
 apiVersion: v1
 kind: Service
 metadata:
-  name: wordpress-mysql
+  name: mysql-for-wp
   labels:
     app: wordpress
 spec:
@@ -12,10 +13,11 @@ spec:
     tier: mysql
   clusterIP: None
 ---
+# The Volume-Claim for persistent volumes
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-pv-claim
+  name: mysql-persistent-volume-claim
   labels:
     app: wordpress
 spec:
@@ -25,10 +27,11 @@ spec:
     requests:
       storage: 20Gi
 ---
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+# The Deployment
+apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: wordpress-mysql
+  name: mysql-for-wp
   labels:
     app: wordpress
 spec:
@@ -49,10 +52,7 @@ spec:
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-pass
-              key: password
+          value: mattt
         ports:
         - containerPort: 3306
           name: mysql
@@ -62,4 +62,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: mysql-persistent-volume-claim
