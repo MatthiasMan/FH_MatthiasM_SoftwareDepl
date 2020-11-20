@@ -15,7 +15,7 @@ alternativ könnte man auch "kubectl apply -f mysql.yaml" & "kubectl apply -f wo
 
 Nach einer warteZeit(dies kann einige minuten dauern), sollte bei erneuter eingabe von "kubectl get all", folgendes sichtbar sein:
 
-![get all before command](https://https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/image.jpg?raw=true)
+![get all before command](https://https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/Lab4/main/getllstart.PNG?raw=true)
 
 Hierbei sind die 2 erstellten Pods zu sehen, einmal für mysql und einmal für wordpress
 die 2 erstellten services für mysl und wordpress
