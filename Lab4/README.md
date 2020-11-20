@@ -17,7 +17,7 @@ alternativ könnte man auch "kubectl apply -f mysql.yaml" & "kubectl apply -f wo
 
 Nach einer warteZeit(dies kann einige minuten dauern), sollte bei erneuter eingabe von "kubectl get all", folgendes sichtbar sein:
 
-![getallafter command](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/getallafter.PNG?raw=true)
+![cluster](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/Cluster.PNG?raw=true)
 
 Hierbei sind die 2 erstellten Pods, Services, Deployments und Replicasets zu sehen, einmal für mysql und einmal für wordpress;
 (replicasets haben den Zweck, dass die laufenden Pods stabil bleiben)
