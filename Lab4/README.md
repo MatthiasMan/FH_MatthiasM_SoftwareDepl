@@ -26,11 +26,11 @@ Hierbei sind die 2 erstellten Pods, Services, Deployments und Replicasets zu seh
 
 In Azure können unsere uploads nun auch unter "Workloads", sowie "Dienste und eingehende Elemente" des Kubernetes Services betrachtet werden.
 
-![workloads](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/workloads.PNG?raw=true)
-![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/dienste.PNG?raw=true)
+![workloads](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/workloadss.PNG?raw=true)
+![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/dienstee.PNG?raw=true)
 
 Nun kann die Externe IP-Adresse unseres wordpress Services besucht werden:
  
 http://51.105.196.205/
 
-![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/Screenshot.PNG?raw=true)
+![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/Screenshott.PNG?raw=true)
