@@ -1,5 +1,7 @@
 Lab 4:
 
+IP Adresse : http://51.105.196.205/
+
 Nachdem die azure kubernetes cli heruntergeladen wurde(az aks install-cli)
 Und die credentials gegetted wurden(az aks get-credentials --resource-group fhwn20 --name fhwn20)
 Kann direkt gestartet werden(kubectl befehle werden nun automatisch auf unser angelegtes azure Kubernetes Service angewandt).
@@ -27,8 +29,8 @@ In Azure können unsere uploads nun auch unter "Workloads", sowie "Dienste und e
 ![workloads](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/workloads.PNG?raw=true)
 ![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/dienste.PNG?raw=true)
 
-Nun kann die Externe IP-Adresse unseres wordpress Services besucht werden. In meinem Fall ist dies:
+Nun kann die Externe IP-Adresse unseres wordpress Services besucht werden:
  
-20.71.66.160
+http://51.105.196.205/
 
 ![dienste](https://github.com/MatthiasMan/FH_MatthiasM_SoftwareDepl/blob/main/Lab4/Screenshot.PNG?raw=true)
