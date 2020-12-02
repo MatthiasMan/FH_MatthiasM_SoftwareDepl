@@ -1,6 +1,6 @@
 Lab 4:
 
-IP Adresse : http://51.105.196.205/
+URL: http://51.105.196.205/
 
 Nachdem die azure kubernetes cli heruntergeladen wurde(az aks install-cli)
 Und die credentials gegetted wurden(az aks get-credentials --resource-group fhwn20 --name fhwn20)
